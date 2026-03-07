@@ -8,7 +8,7 @@ import AdminPage from './pages/adminPage';
 function App() {
   return (
     <BrowserRouter>
-      <div className='w-full h-[600px] bg-amber-600'>
+      <div className='w-full h-[600px] bg-primary text-secondary'>
           <Routes path="/">
             <Route path="/" element={<HomePage/>}/>
             <Route path="/login" element={<LoginPage/>}/>
