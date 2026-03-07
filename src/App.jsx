@@ -1,12 +1,23 @@
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css'
-import Test from './pages/test';
+import HomePage from './pages/homePage';
+import LoginPage from './pages/loginPage';
+import RegisterPage from './pages/registerPage';
+import AdminPage from './pages/adminPage';
 
 function App() {
   return (
-    <div className='w-full h-[600px] bg-amber-600 relative'>
-        <Test/>
-    </div>
-  )
+    <BrowserRouter>
+      <div className='w-full h-[600px] bg-amber-600'>
+          <Routes path="/">
+            <Route path="/" element={<HomePage/>}/>
+            <Route path="/login" element={<LoginPage/>}/>
+            <Route path="/register" element={<RegisterPage/>}/>
+            <Route path="/admin" element={<AdminPage/>}/>
+          </Routes>
+      </div>
+    </BrowserRouter>
+  );
 }
 
 export default App;
